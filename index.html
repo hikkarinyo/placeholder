@@ -1,45 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      overflow: hidden; /* чтобы избежать появления полос прокрутки из-за псевдоэлемента */
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
 
-    body::before {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 1px; /* толщина полоски, которую вы хотите вырезать */
-      background: linear-gradient(to bottom, #ffffff 0%, #727270 100%); /* ваш градиентный фон */
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1; /* чтобы быть выше изображения */
-    }
+        body::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100vh;
+            background: radial-gradient(387.34% 97.26% at 16.43% 55.13%, #171719 0%, #2F2E33 41.68%, #4C4A4F 100%);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
 
-    #content {
-      width: 100%;
-      height: calc(100% - 1px); /* учитывает высоту полоски */
-      position: fixed;
-      top: 1px; /* смещение на высоту полоски */
-      left: 0;
-      z-index: 0; /* ниже псевдоэлемента */
-    }
+        #content {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+        }
 
-    #content img {
-      object-fit: cover; /* чтобы избежать растягивания изображения */
-      width: 100%;
-      height: 100%;
-    }
-  </style>
+        #content img {
+            object-fit: cover;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 <div id="content">
-  <img src="placeholder.png" alt="Your Image"/>
+    <img src="placeholder.png" alt="Your Image"/>
 </div>
 </body>
 </html>
+
