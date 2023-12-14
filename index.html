@@ -6,21 +6,34 @@
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom, #727270, #000000); /* Градиентный фон от серого к черному */
       overflow: hidden;
     }
 
-    img {
-      width: 100%;
-      height: auto;
+    body::before {
+      content: "";
       display: block;
-      margin: 0;
+      width: 100%;
+      height: 1px;
+      background: radial-gradient(387.34% 97.26% at 16.43% 55.13%, #171719 0%, #2F2E33 41.68%, #4C4A4F 100%);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    #content {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
     }
   </style>
-  <title>Градиентный фон с изображением</title>
 </head>
 <body>
-<img src="placeholder.png" alt="Изображение">
+<div id="content">
+  <img src="placeholder.png" style="height: 100%; width: 100%;" alt="information"/>
+</div>
 </body>
 </html>
