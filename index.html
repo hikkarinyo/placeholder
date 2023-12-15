@@ -1,7 +1,31 @@
-<html>
-<body style="background: #727270; margin: 0;">
-<div style="width: 100%; height: 100%">
-    <img src="placeholder.png" style="height: 100%; width: 100%; position: fixed;"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: #727270;
+            margin: 0;
+        }
+
+        .image-container {
+            width: 100%;
+            height: 100vh; /* Задайте высоту в зависимости от ваших требований */
+            overflow: hidden;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Обрезать избыточное содержимое */
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+<div class="image-container">
+    <img src="placeholder.png" alt="Изображение">
 </div>
 </body>
 </html>
